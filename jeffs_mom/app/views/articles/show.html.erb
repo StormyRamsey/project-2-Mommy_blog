@@ -1,28 +1,54 @@
-  <img src="<%= @article.img_url %>"/>
+<!DOCTYPE html>
+<html>
+<header>
+</header>
+  <body>
+    <head>
+    </head>
 
-<p><h2><%= @article.title %></h2></p>
-<p><h3><%= @article.text %></h3></p>
+    <nav>
+      <%= link_to 'Home', root_path %> <%= link_to 'JM\'s Reviews', articles_path %> <%= link_to 'Post a Review', new_article_path %>
+    </nav>
 
-<h2>Comments</h2>
+<div class='box'>
+    <section class='section-1'>
+      <div>
+      <img src="<%= @article.img_url %>"/>
+      <p><h2><%= @article.title %></h2></p>
+      <p><h3><%= @article.text %></h3></p>
+    </section>
+    </div>
 
-<% @article.comments.each do |comment| %>
-  <p><%= comment.commenter %></p>
-  <p><%= comment.body %></p>
-<% end %>
+<div>
+    <section class='section-2'>
 
-<h2>Add a comment:</h2>
-<%= form_for([@article, @article.comments.build]) do |f| %>
-  <p>
-    <%= f.label :commenter %><br>
-    <%= f.text_field :commenter %>
-  </p>
-  <p>
-    <%= f.label :body %><br>
-    <%= f.text_area :body %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
-<%= link_to 'Edit', edit_article_path(@article) %>
-<%= link_to 'Back', articles_path %>
+      <h2>Comments</h2>
+        <% @article.comments.each do |comment| %>
+          <p><%= comment.commenter %></p>
+          <p><%= comment.body %></p>
+
+        <% end %>
+
+      <h2>Add a comment:</h2>
+        <%= form_for([@article, @article.comments.build]) do |f| %>
+          <p>
+            <%= f.label :commenter %><br>
+            <%= f.text_field :commenter %>
+          </p>
+          <p>
+            <%= f.label :body %><br>
+            <%= f.text_area :body %>
+          </p>
+          <p>
+            <%= f.submit %>
+          </p>
+        <%= link_to 'Edit', edit_article_path(@article) %>
+      <% end %>
+
+    </section>
+  </div>
+    <footer>
+      <%= link_to 'Back', articles_path %>
+    </footer>
+</body>
+</html>
