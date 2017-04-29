@@ -1,5 +1,6 @@
-<h1>Listing articles</h1>
-<%= link_to 'New post', new_article_path %>
+<h1>Jeffrey's Mom</h1>
+<%= link_to 'Post a Review', new_article_path %>
+
 <div>
 
     <p>Title</p>
@@ -7,13 +8,13 @@
 
 
   <% @articles.each do |article| %>
-
+      <div class ="article">
+<img src="<%= article.img_url %>"/>
       <p><%= article.title %></p>
       <p><%= article.text %></p>
       <p><%= link_to 'View Post', article_path(article) %></p>
-      <p><%= link_to 'Edit Post', edit_article_path(article) %></p>
-      <p><%= link_to 'Destroy', article_path(article),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></p>
+      <p><%= link_to 'Delete', article_path(article),
+                    method: :delete,
+                    data: { confirm: 'Are you sure?' } %></p>
   <% end %>
 </div>
