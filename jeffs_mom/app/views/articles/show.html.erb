@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html>
 <header>
+
 </header>
   <body>
     <head>
+      <h1><%= link_to 'Jeffrey\'s Mom', root_path %></h1>
     </head>
 
     <nav>
       <%= link_to 'Home', root_path %> <%= link_to 'JM\'s Reviews', articles_path %> <%= link_to 'Post a Review', new_article_path %>
     </nav>
 
-<div class='box'>
-    <section class='section-1'>
+<div class='box-show'>
+    <section class='section-show'>
       <div>
       <img src="<%= @article.img_url %>"/>
       <p><h2><%= @article.title %></h2></p>
@@ -20,7 +22,9 @@
     </div>
 
 <div>
-    <section class='section-2'>
+
+  <div class='box-show2'
+    <section class='section-show2'>
 
       <h2>Comments</h2>
         <% @article.comments.each do |comment| %>
@@ -29,22 +33,24 @@
 
         <% end %>
 
-      <h2>Add a comment:</h2>
+      <h3>Add a comment:</h3>
         <%= form_for([@article, @article.comments.build]) do |f| %>
           <p>
-            <%= f.label :commenter %><br>
+            <%= f.label :name%><br>
             <%= f.text_field :commenter %>
           </p>
           <p>
-            <%= f.label :body %><br>
+            <%= f.label :comment %><br>
             <%= f.text_area :body %>
           </p>
           <p>
             <%= f.submit %>
           </p>
-        <%= link_to 'Edit', edit_article_path(@article) %>
-      <% end %>
+    </div>
 
+      <% end %>
+      <%= link_to 'Edit Comment', edit_article_comment_path(@article) %>
+            <%= link_to 'Edit Post', edit_article_path(@article) %>
     </section>
   </div>
     <footer>

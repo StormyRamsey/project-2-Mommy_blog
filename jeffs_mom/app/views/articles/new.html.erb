@@ -3,17 +3,19 @@
 <!DOCTYPE html>
 <html>
 <header>
+
 </header>
     <head>
-        <h1>Post a New Review</h1>
+      <h1><%= link_to 'Jeffrey\'s Mom', root_path %></h1>
     </head>
 <body>
     <nav>
         <%= link_to 'Home', root_path %> <%= link_to 'JM\'s Reviews', articles_path %> <%= link_to 'Post a Review', new_article_path %>
     </nav>
 
-    <div class='box'>
-    <section class ='section-1'>
+    <div class='box-new'>
+    <section class ='section-new'>
+      <h2>Post a Review</h2>
         <%= form_for :article, url: articles_path do |f| %>
 
           <p>

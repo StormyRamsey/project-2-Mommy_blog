@@ -1,0 +1,31 @@
+<h2>Edit</h2>
+      <%= form_for [@article, @comment] do |f| %>
+
+      <div>
+      <img src="<%= @article.img_url %>"/>
+      <p><h2><%= @article.title %></h2></p>
+      <p><h3><%= @article.text %></h3></p>
+      </section>
+      </div>
+
+      <p>
+        <%= f.label :name%><br>
+        <%= f.text_field :commenter %>
+      </p>
+      <p>
+        <%= f.label :comment %><br>
+        <%= f.text_area :body %>
+      </p>
+      <p>
+        <%= f.submit %>
+    <% end %>
+  </section>
+  </div>
+
+    <footer>
+    <%= link_to 'Back', articles_path %>
+    </footer>
+
+
+</body>
+</html>

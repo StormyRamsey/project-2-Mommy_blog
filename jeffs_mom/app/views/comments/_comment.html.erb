@@ -2,21 +2,22 @@
 <html>
 <header>
 </header>
+
   <body>
     <head>
+      <h1><%= link_to 'Jeffrey\'s Mom', root_path %></h1>
     </head>
 
     <nav>
         <%= link_to 'Home', root_path %> <%= link_to 'JM\'s Reviews', articles_path %> <%= link_to 'Post a Review', new_article_path %>
     </nav>
-
-<div class='box'>
-    <section class='section-1' >
+        <h2>Post a Comment</h2>
+<div class='box-comment'>
+    <section class='section-comment' >
       <p>
           <strong>Name:</strong>
           <%= comment.commenter %>
       </p>
-
       <p>
           <strong>Comment:</strong>
           <%= comment.body %>
