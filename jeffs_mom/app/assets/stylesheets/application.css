@@ -1,18 +1,4 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+
 
  body {
    margin: 0px;
@@ -29,9 +15,17 @@
 
  .aside{
    max-height: auto;
-   width: 200px;
+   width: 240px;
    background-color: #ffd9ca;
-   order: 3;
+   order: 4;
+   float:right;
+   margin-left: 0;
+ }
+
+ .news-feed{
+   margin:auto;
+   order:3;
+
  }
 
 img {
@@ -45,11 +39,13 @@ nav {
   background-color: #ff8656;
   margin: 0px;
   display: flex;
+  justify-content: center;
   justify-content: space-around;
   padding-top: 35px;
-    color:#ffffff;
-
+  color:#ffffff;
+  font-size: 20px;
 }
+
 a:link {
     text-decoration: none;
 
@@ -68,13 +64,15 @@ a:active {
 }
 
 footer {
-  order: 4;
+  order: 5;
   height: 160px;
   max-width: auto;
   background-color: #ff5d1d;
 }
 
-.box-edit, .box-new, .box-show, .box-comment{
+
+
+.box-edit, .box-new, .box-show, .box-comment, .box-show2{
   display: flex;
   height: 600px;
 
@@ -85,21 +83,38 @@ footer {
   margin: auto;
 }
 
-.section-comment{
-  margin-left: 50px;
+.section-show2{
+  margin-left: 60px;
+}
+
+.box-post{
+  display: flex;
+
+}
+
+.section-post{
+align-items: center;
+margin: auto;
 }
 
 .sign-up{
   color:#ff5d1d;
 }
 
-h1 {
+ h1 {
   color:#ffd9ca;
   font-family: 'Anton', sans-serif;
   font-size: 60px;
   margin-left: 20px;
 }
 
-h2, h3, p, a{
-  color:#ffffff;
+h2{
+  color:#faebd7;
+  font-family: 'Anton', sans-serif;
+  font-size: 39px;
+  text-align: center;
+}
+
+ h3, p, a{
+  color:#faebd7;
 }

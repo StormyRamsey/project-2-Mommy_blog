@@ -9,20 +9,23 @@
 
 <body>
   <nav>
-  <%= link_to 'Home', root_path %> <%= link_to 'JM\'s Reviews', articles_path %> <%= link_to 'Post a Review', new_article_path %>
+    <%= link_to 'Home', root_path %>
+    <%= link_to 'JM\'s Reviews', articles_path %>
+    <%= link_to 'Post a Review', new_article_path %>
   </nav>
+
   <div class='box'>
-    <section class="section-1">
-        <div>
+    <div class="news-feed">
           <h2><%= 'Black Friday Listings' %></h2>
-          <%= image_tag("http://www.lovebrownsugar.com/wp-content/uploads/2014/12/dolllogo.jpg", :alt => "mommy and baby") %>
-          <%= link_to 'Pardon My Fro', src='https://pardonmyfro.com/'%>
-        </div>
-    </section>
-
-
-    <aside class='aside'><p class="sign-up">Sign In Sign Up</p></aside>
+          <p><%= image_tag("http://www.lovebrownsugar.com/wp-content/uploads/2014/12/dolllogo.jpg", :alt => "mommy and baby") %></p>
+          <p><%= link_to 'Pardon My Fro', src='https://pardonmyfro.com/'%><p>
     </div>
+    
+    <div class='aside'>
+      <aside ><p class="sign-up">Sign In Sign Up</p></aside>
+    </div>
+    </div>
+
     <footer>
     </footer>
 

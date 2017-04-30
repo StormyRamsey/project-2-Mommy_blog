@@ -13,46 +13,34 @@
     </nav>
 
 <div class='box-show'>
-    <section class='section-show'>
-      <div>
+    <div class='section-show'>
+
       <img src="<%= @article.img_url %>"/>
       <p><h2><%= @article.title %></h2></p>
-      <p><h3><%= @article.text %></h3></p>
-    </section>
+      <p><h3><%= @article.text %></h3></p>   <%= link_to 'Edit Post', edit_article_path(@article) %>
     </div>
+</div>
 
-<div>
-
-  <div class='box-show2'
-    <section class='section-show2'>
-
+<div class='box-show2'>
+  <div class='section-show2'>
       <h2>Comments</h2>
         <% @article.comments.each do |comment| %>
           <p><%= comment.commenter %></p>
           <p><%= comment.body %></p>
-
         <% end %>
 
       <h3>Add a comment:</h3>
         <%= form_for([@article, @article.comments.build]) do |f| %>
-          <p>
-            <%= f.label :name%><br>
-            <%= f.text_field :commenter %>
-          </p>
-          <p>
-            <%= f.label :comment %><br>
-            <%= f.text_area :body %>
-          </p>
-          <p>
-            <%= f.submit %>
-          </p>
+          <p><%= f.label :name%><br>
+              <%= f.text_field :commenter %></p>
+          <p><%= f.label :comment %><br>
+              <%= f.text_area :body %></p>
+          <p><%= f.submit %> <%= link_to 'Edit Comment', edit_article_comment_path(@article) %></p>
+              <% end %>
     </div>
-
-      <% end %>
-      <%= link_to 'Edit Comment', edit_article_comment_path(@article) %>
-            <%= link_to 'Edit Post', edit_article_path(@article) %>
-    </section>
   </div>
+
+
     <footer>
       <%= link_to 'Back', articles_path %>
     </footer>
