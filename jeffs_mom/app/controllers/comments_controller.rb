@@ -16,7 +16,7 @@ end
  end
 
  def edit
-     @article = Article.find(params[:id])
+     @article = Article.find(params[:article_id])
      @comment = @article.comments.find(params[:id])
      @comment = Comment.find(params[:id])
    end

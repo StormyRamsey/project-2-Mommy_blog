@@ -12,15 +12,16 @@
     <nav>
         <%= link_to 'Home', root_path %> <%= link_to 'JM\'s Reviews', articles_path %> <%= link_to 'Post a Review', new_article_path %>
     </nav>
-<div class='box-edit'>
-<section class ='section-edit'>
 
-  <h2>Edit</h2>
+<div class='comment-form'>
+<section class ='comment-input'>
+
+  <h2>Edit Review</h2>
         <%= form_for :article, url: article_path(@article), method: :patch do |f| %>
 
           <p>
             <%= f.label :img_url %><br>
-            <%= f.file_field :img_url %>
+            <%= f.text_field :img_url %>
           </p>
 
           <p>
@@ -34,7 +35,7 @@
           </p>
 
           <p>
-            <%= f.submit %>
+            <%= f.submit :value => "Edit Review", :class => "submit" %>
           </p>
       <% end %>
     </section>

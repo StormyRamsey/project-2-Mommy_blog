@@ -13,14 +13,14 @@
         <%= link_to 'Home', root_path %> <%= link_to 'JM\'s Reviews', articles_path %> <%= link_to 'Post a Review', new_article_path %>
     </nav>
 
-    <div class='box-new'>
-    <section class ='section-new'>
+    <div class='article-form'>
+    <section class ='article-input'>
       <h2>Post a Review</h2>
         <%= form_for :article, url: articles_path do |f| %>
 
           <p>
             <%= f.label :img_url %><br>
-            <%= f.file_field :image %>
+            <%= f.text_field :img_url %>
           </p>
 
           <p>
@@ -34,7 +34,7 @@
           </p>
 
           <p>
-            <%= f.submit %>
+            <%= f.submit :value => "Post Review", :class => "submit" %>
           </p>
         <% end %>
     </section>

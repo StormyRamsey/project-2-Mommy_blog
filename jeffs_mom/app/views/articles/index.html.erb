@@ -11,14 +11,14 @@
       <%= link_to 'Home', root_path %> <%= link_to 'JM\'s Reviews', articles_path %> <%= link_to 'Post a Review', new_article_path %>
     </nav>
 
-    <div class='box-post'>
-      <div class='section-post'>
+      <h2><%= 'JM\'s Reviews' %></h2>
+    <div class='review-post'>
+      <div class='post'>
           <% @articles.each do |article| %>
-
           <img src="<%= article.img_url %>"/>
-          <p><%= article.title %></p>
+          <h3><%= article.title %></h3>
           <p><%= article.text %></p>
-          <p class="post-menu"><%= link_to 'View Post', article_path(article) %> <%= link_to 'Edit', edit_article_path(article) %> <%= link_to 'Delete', article_path(article),
+          <p class="post-menu"><%= link_to 'View', article_path(article) %> <%= link_to 'Edit', edit_article_path(article) %> <%= link_to 'Delete', article_path(article),
                         method: :delete,
                         data: { confirm: 'Are you sure?' } %></p>
         <% end %>
@@ -28,7 +28,7 @@
 
 
   <footer>
-    <%= link_to 'Back', articles_path %>
+    <p><%= link_to 'Back', articles_path %></p>
   </footer>
 
 </body>

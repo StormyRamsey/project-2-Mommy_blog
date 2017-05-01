@@ -21,12 +21,24 @@ Comment.create(
 
 article2 = Article.create(
 title: "More Diapers for your Bucks",
-text: "Walmart",
+text: "Walmart Lorem anaslkfjsjjslflsjlfl",
 img_url: "https://cdn.multibrand.pgsitecore.com/en-US/-/media/Pampers/Pampers-US/Images/Loyalty/StarDiapers_MainPackshot_355x215.png"
 )
 
 Comment.create(
 commenter: "Stormy",
-body: "",
+body: "Here is my comment",
 article: article2
+)
+
+article3 = Article.create(
+title: "Afro Baby Art",
+text: "Afro Baby Lorem jslkfs;fjsdjfl;sdfjd",
+img_url: "https://s-media-cache-ak0.pinimg.com/736x/d4/37/45/d4374576666c51611c746102b961eb86.jpg"
+)
+
+Comment.create(
+commenter: "Stormy",
+body: "Here is my comment",
+article: article3
 )
