@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
+  <header>
     <title>Jeffrey's Moms Blog</title>
     <%= csrf_meta_tags %>
 
@@ -8,11 +8,39 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
+  </header>
+  <head>
+  <h1><%= link_to 'Welcome to Jeffrey\'s Moms Blog', root_path %></h1>
   </head>
 
-  <body>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-    <%= yield %>
-  </body>
+    <body class="app-body">
+
+      <nav>
+          <%= link_to 'Home', root_path %>
+          <%= link_to 'JM\'s Reviews', articles_path %>
+          <%= link_to 'Post a Review', new_article_path %>
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
+
+        <% if !current_user %>
+        <p><%= link_to "Sign up", new_user_registration_path %> / <%= link_to "Sign in", new_user_session_path %></p>
+        <% else %>
+        <p class="sign_notice"><%= link_to "Sign out", destroy_user_session_path, :method => :delete %> / <%= current_user.email %></p>
+        <% end %>
+      </nav>
+
+
+      <div class='aside1'>
+      <aside></aside>
+      </div>
+
+      <div class='aside2'>
+      <aside></aside>
+      </div>
+        <%= yield %>
+
+        <footer>
+        </footer>
+    </body>
+
 </html>

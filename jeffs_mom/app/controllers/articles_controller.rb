@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
-
-
+before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+before_filter :authenticate_user!, :except => [:show, :index]
   def index
       @articles = Article.all
     end
@@ -13,9 +13,15 @@ class ArticlesController < ApplicationController
       @article = Article.new
   end
 
-  def edit
-  @article = Article.find(params[:id])
-end
+    def edit
+    @article = Article.find(params[:id])
+    if @article.user == current_user
+      @article.destroy
+    else
+      flash[:alert] = "Only the author of the post can delete"
+    end
+    redirect_to articles_path
+  end
 
 def update
   @article = Article.find(params[:id])
@@ -27,19 +33,17 @@ def update
 end
 
   def create
-    @article = Article.new(article_params)
-
-    if @article.save
-      redirect_to @article
-    else
-      render 'new'
-    end
+    @article = Article.create!(article_params.merge(user: current_user))
+    redirect_to article_path(@article)
   end
 
 def destroy
   @article = Article.find(params[:id])
+  if @article.user == current_user
   @article.destroy
-
+else
+  flash[:alert] = "Only the author of the post can delete"
+end
   redirect_to articles_path
 end
 
