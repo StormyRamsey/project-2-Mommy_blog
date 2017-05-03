@@ -20,15 +20,14 @@
    order: 3;
    float:right;
    margin: 130px 60px 0 60px;
-
-
  }
 
  .news-feed{
    margin:auto;
  }
 
-img {
+img{
+margin: auto;
   max-width: 100%;
   width: 540px;
   height: auto;
@@ -41,11 +40,11 @@ img:hover {
 }
 
 .img-edit{
-  max-width: 100%;
-  width: 540px;
-  height: auto;
-  opacity: 0.5;
-  border: solid 5px #ff5d1d;
+  margin-top: auto;
+  margin-left: 350px;
+  margin-right: 350px;
+  margin-bottom: auto;
+
 }
 
 nav {
@@ -72,26 +71,40 @@ a:visited {
 
 a:hover {
     text-decoration: none;
+    color:#8A2BE2;
 }
 
-a:active {
-    text-decoration: ;
+h1 > a:hover{
+  text-decoration: none;
+    color:#faebd7;
 }
 
-footer {
-  order: 5;
+ footer {
+  order: 4;
   height: 160px;
-  max-width: auto;
   background-color: #ff5d1d;
+  margin-top: 40px;
 }
 
-.article-box{
+.article-box {
  display: flex;
  height: 600px;
  margin: 20px;
- padding-bottom: 90px;
-}
+ padding-bottom: 30px;
+   flex-direction: column;
 
+}
+.review-post, .comment-box {
+  display: flex;
+  height: 100px;
+  margin: auto;
+  padding-bottom: 90px;
+  padding-left: 40px;
+  padding-right: 40px;
+  flex-direction: column;
+  text-align: center;
+
+}
 .article-edit-comment{
   display: flex;
   height: 600px;
@@ -101,14 +114,15 @@ footer {
 
 .article{
   align-items: center;
+
   margin: auto;
-  padding-bottom: 5px;
+  padding-bottom: 50px;
 }
 .comment-box {
   display: flex;
   height: 600px;
   margin-bottom: 20px;
-
+padding: 60px;
 }
 
 .comments {
@@ -117,12 +131,16 @@ footer {
 
 }
 
-.article-form, .comment-form, .review-post{
+.article-form, .comment-form, {
   display: flex;
   padding: 20px;
 }
 
-.post, .article-input, .comment-input{
+.article-input, form{
+  padding-left: 90px;
+  padding-right: 90px;
+}
+.post, .comment-input{
 align-items: center;
 margin: auto;
 }
@@ -157,4 +175,15 @@ p, a{
 h3{
   font-size: 25px;
   color:#faebd7;
+  text-align: center;
+}
+
+input, textarea{
+  width:100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ff5d1d;
+    border-radius: 4px;
+    background-color: #faebd7;
 }

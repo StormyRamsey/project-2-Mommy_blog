@@ -10,7 +10,7 @@
 
 
     <div class='article-form'>
-    <section class ='article-input'>
+    <div class ='article-input'>
       <h2>Post a Review</h2>
         <%= form_for :article, url: articles_path do |f| %>
 
@@ -33,7 +33,7 @@
             <%= f.submit :value => "Post Review", :class => "submit" %>
           </p>
         <% end %>
-    </section>
+    </div>
     </div>
 
 </body>

@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
 before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 before_filter :authenticate_user!, :except => [:show, :index]
+  before_action :authenticate_user!
   def index
       @articles = Article.all
     end
@@ -16,11 +17,12 @@ before_filter :authenticate_user!, :except => [:show, :index]
     def edit
     @article = Article.find(params[:id])
     if @article.user == current_user
-      @article.destroy
+      @article
     else
-      flash[:alert] = "Only the author of the post can delete"
+      flash[:alert] = "Only the author of the post can edit"
+      redirect_to articles_path
     end
-    redirect_to articles_path
+    
   end
 
 def update
