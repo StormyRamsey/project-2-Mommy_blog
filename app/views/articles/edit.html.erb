@@ -2,15 +2,9 @@
 <!DOCTYPE html>
 <html>
 
-<header>
-</header>
-
-
 <body>
-
-<div class='comment-form'>
-<section class ='comment-input'>
-
+  <div class='article-form'>
+  <div class ='article-input'>
   <h2>Edit Review</h2>
         <%= form_for :article, url: article_path(@article), method: :patch do |f| %>
 
@@ -33,7 +27,7 @@
             <%= f.submit :value => "Edit Review", :class => "submit" %>
           </p>
       <% end %>
-    </section>
+    </div>
     </div>
 
 

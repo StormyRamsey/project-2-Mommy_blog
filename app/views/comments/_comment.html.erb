@@ -6,24 +6,23 @@
   <body>
 
         <h2>Post a Comment</h2>
-<div class='box-comment'>
-    <section class='section-comment' >
-      <p>
+  <div class='box-comment'>
+      <div class='section-comment'>
+        <p>
           <strong>Name:</strong>
           <%= comment.commenter %>
-      </p>
-      <p>
+        </p>
+        <p>
           <strong>Comment:</strong>
           <%= comment.body %>
-      </p>
-
-      <p>
+        </p>
+        <p>
           <%= link_to 'Delete Comment', [comment.article, comment],
                        method: :delete,
                        data: { confirm: 'Are you sure, you want to delete this comment?' } %>
-      </p>
-  </section>
-</div>
+        </p>
+      </div>
+  </div>
 
 
 </html>

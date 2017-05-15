@@ -16,23 +16,7 @@ end
 
  end
 
- def edit
-     @article = Article.find(params[:article_id])
-     @comment = @article.comments.find(params[:id])
-     @comment = Comment.find(params[:id])
-     
-   end
-
-   def update
-     @article = Article.find(params[:id])
-     @comment = Comment.find(params[:id])
-
-     if @comment.update(comment_params)
-       redirect_to @article
-     else
-       render 'edit'
-     end
-   end
+ 
 
  def destroy
     @article = Article.find(params[:article_id])

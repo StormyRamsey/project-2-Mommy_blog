@@ -5,14 +5,18 @@
   <body>
 
       <h2><%= 'JM\'s Reviews' %></h2>
+      <div class="article-container">
+        <div>
           <% @articles.each do |article| %>
-          <img  class="img-edit" src="<%= article.img_url %>"/>
+          <img src="<%= article.img_url %>"/>
+        </div>
           <div class='review-post'>
         <h3><%= article.title %></h3>
             <p><%= article.text %></p>
         <p class="post-menu"><%= link_to 'View', article_path(article) %> <%= link_to 'Edit', edit_article_path(article) %> <%= link_to 'Delete', article_path(article),
                         method: :delete,
                         data: { confirm: 'Are you sure?' } %></p>
+        </div>
         </div>
         <% end %>
 

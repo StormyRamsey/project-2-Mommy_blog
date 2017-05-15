@@ -5,28 +5,29 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Article.destroy_all
+Comment.destroy_all
 
-
-article2 = Article.create(
+article1 = Article.create({
 title: "More Diapers for your Bucks",
-text: "Walmart Lorem anaslkfjsjjslflsjlfl",
+text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
 img_url: "https://cdn.multibrand.pgsitecore.com/en-US/-/media/Pampers/Pampers-US/Images/Loyalty/StarDiapers_MainPackshot_355x215.png"
-)
+})
 
-Comment.create(
+Comment.create({
+commenter: "Stormy",
+body: "Here is my comment",
+article: article1
+})
+
+article2 = Article.create({
+title: "Afro Baby Art",
+text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+img_url: "https://s-media-cache-ak0.pinimg.com/736x/d4/37/45/d4374576666c51611c746102b961eb86.jpg"
+})
+
+Comment.create({
 commenter: "Stormy",
 body: "Here is my comment",
 article: article2
-)
-
-article3 = Article.create(
-title: "Afro Baby Art",
-text: "Afro Baby Lorem jslkfs;fjsdjfl;sdfjd",
-img_url: "https://s-media-cache-ak0.pinimg.com/736x/d4/37/45/d4374576666c51611c746102b961eb86.jpg"
-)
-
-Comment.create(
-commenter: "Stormy",
-body: "Here is my comment",
-article: article3
-)
+})

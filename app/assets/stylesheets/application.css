@@ -27,10 +27,9 @@
  }
 
 img{
-margin: auto;
-  max-width: 100%;
-  width: 540px;
-  height: auto;
+  margin: auto;
+  height: 350px;
+  width: 400px;
   opacity: 0.5;
   border: solid 5px #ff5d1d;
 }
@@ -39,13 +38,6 @@ img:hover {
   opacity:0.9;
 }
 
-.img-edit{
-  margin-top: auto;
-  margin-left: 350px;
-  margin-right: 350px;
-  margin-bottom: auto;
-
-}
 
 nav {
   order: 2;
@@ -62,7 +54,6 @@ nav {
 
 a:link {
     text-decoration: none;
-
 }
 
 a:visited {
@@ -86,59 +77,19 @@ h1 > a:hover{
   margin-top: 40px;
 }
 
-.article-box {
- display: flex;
- height: 600px;
- margin: 20px;
- padding-bottom: 30px;
-   flex-direction: column;
-
-}
-.review-post, .comment-box {
-  display: flex;
-  height: 100px;
-  margin: auto;
-  padding-bottom: 90px;
-  padding-left: 40px;
-  padding-right: 40px;
-  flex-direction: column;
-  text-align: center;
-
-}
-.article-edit-comment{
-  display: flex;
-  height: 600px;
-  margin: 20px;
-  padding-bottom: 90px;
-}
-
-.article{
-  align-items: center;
-
-  margin: auto;
-  padding-bottom: 50px;
-}
 .comment-box {
   display: flex;
   height: 600px;
   margin-bottom: 20px;
-padding: 60px;
+  padding: 60px;
 }
 
 .comments {
   align-items: center;
   margin: auto;
-
 }
-
-.article-form, .comment-form, {
-  display: flex;
-  padding: 20px;
-}
-
-.article-input, form{
-  padding-left: 90px;
-  padding-right: 90px;
+.review-post{
+  width: 600px;
 }
 .post, .comment-input{
 align-items: center;
@@ -154,7 +105,8 @@ margin: auto;
 .notice, .alert, .sign_notice {
   font-size: 14px;
 }
- h1 {
+
+ h1{
   color:#ffd9ca;
   font-family: 'Anton', sans-serif;
   font-size: 60px;
@@ -167,7 +119,10 @@ h2{
   font-size: 45px;
   text-align: center;
 }
-
+form, .article-form {
+  padding-left: 90px;
+  padding-right: 90px;
+}
 p, a{
   color:#faebd7;
 }
@@ -179,11 +134,47 @@ h3{
 }
 
 input, textarea{
-  width:100%;
+    width:100%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
     border: 2px solid #ff5d1d;
     border-radius: 4px;
     background-color: #faebd7;
+}
+.article-container{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ height: 600px;
+ margin: 20px;
+ padding-bottom: 30px;
+}
+
+.comment-text{
+  text-align: center;
+}
+
+.article-edit-comment{
+  display: flex;
+  height: 600px;
+  margin: 20px;
+  padding-bottom: 90px;
+}
+
+.article{
+  align-items: center;
+  margin: auto;
+  padding-bottom: 50px;
+}
+
+{
+  display: flex;
+  padding: 20px;
+}
+
+.article-input{
+  padding-left: 90px;
+  padding-right: 90px;
 }
