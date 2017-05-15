@@ -1,0 +1,180 @@
+
+
+ .app-body {
+   margin: 0px;
+   background-color: #ffaC8b;
+   font-family: 'Merriweather Sans', sans-serif;
+ }
+
+ .box{
+   display: flex;
+ }
+
+ head{ order: 1;
+ }
+
+ .aside1{
+   height: 650px;
+   width: 240px;
+   background-color: #ffd9ca;
+   order: 3;
+   float:right;
+   margin: 130px 60px 0 60px;
+ }
+
+ .news-feed{
+   margin:auto;
+ }
+
+img{
+  margin: auto;
+  height: 350px;
+  width: 400px;
+  opacity: 0.5;
+  border: solid 5px #ff5d1d;
+}
+
+img:hover {
+  opacity:0.9;
+}
+
+
+nav {
+  order: 2;
+  height: 80px;
+  background-color: #ff8656;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  padding-top: 35px;
+  color:#ffffff;
+  font-size: 20px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color:#8A2BE2;
+}
+
+h1 > a:hover{
+  text-decoration: none;
+    color:#faebd7;
+}
+
+ footer {
+  order: 4;
+  height: 160px;
+  background-color: #ff5d1d;
+  margin-top: 40px;
+}
+
+.comment-box {
+  display: flex;
+  height: 600px;
+  margin-bottom: 20px;
+  padding: 60px;
+}
+
+.comments {
+  align-items: center;
+  margin: auto;
+}
+.review-post{
+  width: 600px;
+}
+.post, .comment-input{
+align-items: center;
+margin: auto;
+}
+
+.new_user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.5em;
+}
+.notice, .alert, .sign_notice {
+  font-size: 14px;
+}
+
+ h1{
+  color:#ffd9ca;
+  font-family: 'Anton', sans-serif;
+  font-size: 60px;
+  margin-left: 20px;
+}
+
+h2{
+  color:#faebd7;
+  font-family: 'Anton', sans-serif;
+  font-size: 45px;
+  text-align: center;
+}
+form, .article-form {
+  padding-left: 90px;
+  padding-right: 90px;
+}
+p, a{
+  color:#faebd7;
+}
+
+h3{
+  font-size: 25px;
+  color:#faebd7;
+  text-align: center;
+}
+
+input, textarea{
+    width:100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ff5d1d;
+    border-radius: 4px;
+    background-color: #faebd7;
+}
+.article-container{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ height: 600px;
+ margin: 20px;
+ padding-bottom: 30px;
+}
+
+.comment-text{
+  text-align: center;
+}
+
+.article-edit-comment{
+  display: flex;
+  height: 600px;
+  margin: 20px;
+  padding-bottom: 90px;
+}
+
+.article{
+  align-items: center;
+  margin: auto;
+  padding-bottom: 50px;
+}
+
+{
+  display: flex;
+  padding: 20px;
+}
+
+.article-input{
+  padding-left: 90px;
+  padding-right: 90px;
+}
