@@ -150,6 +150,7 @@ input, textarea{
  height: 600px;
  margin: 20px;
  padding-bottom: 30px;
+ background-color: black;
 }
 
 .comment-text{
