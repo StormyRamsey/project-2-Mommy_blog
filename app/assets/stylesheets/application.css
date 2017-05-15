@@ -155,6 +155,7 @@ input, textarea{
 
 .comment-text{
   text-align: center;
+  width: 600px;
 }
 
 .article-edit-comment{
@@ -172,7 +173,4 @@ input, textarea{
 .article-input{
   padding-left: 90px;
   padding-right: 90px;
-}
-.comment-text{
-  width: 600px;
 }
