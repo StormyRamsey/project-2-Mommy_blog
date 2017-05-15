@@ -142,7 +142,7 @@ input, textarea{
     border-radius: 4px;
     background-color: #faebd7;
 }
-.article-container{
+.article-container, .review-post{
  display: flex;
  flex-direction: column;
  align-items: center;
@@ -168,12 +168,6 @@ input, textarea{
   margin: auto;
   padding-bottom: 50px;
 }
-
-{
-  display: flex;
-  padding: 20px;
-}
-
 .article-input{
   padding-left: 90px;
   padding-right: 90px;
